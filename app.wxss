@@ -1,0 +1,23 @@
+.tmpHeader {
+  padding: 10rpx;
+}
+.tmpHeader image {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+}
+.tmpHeader text {
+  font-size: 32rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.tmpTitle {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-left: 10rpx;
+}
+.tmpContent{
+  font-size: 32rpx;
+  text-indent: 32rpx;
+  letter-spacing: 2rpx;
+}

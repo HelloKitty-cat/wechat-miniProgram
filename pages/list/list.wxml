@@ -1,0 +1,24 @@
+<!--pages/list/list.wxml-->
+<import src='../tmpList/tmpList'/>
+<view>
+  <swiper indicator-dots indicator-color='yellowgreen' indicator-active-color='deeppink' autoplay circular>
+    <swiper-item>
+      <image src='/images/detail/carousel/01.jpg'></image>
+    </swiper-item>
+     <swiper-item>
+      <image src='/images/detail/carousel/02.jpg'></image>
+    </swiper-item>
+     <swiper-item>
+      <image src='/images/detail/carousel/03.jpg'></image>
+    </swiper-item>
+     <swiper-item>
+      <image src='/images/detail/carousel/04.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <!-- 默认数组的当前项的下标变量名默认为 index，数组当前项的变量名默认为 item -->
+ <view wx:for='{{listArr}}' wx:key='index'>
+   <view catchtap='handleDetails' data-index='{{index}}'>
+    <template is='tmpList' data='{{...item}}'></template>
+  </view>
+ </view>
+</view>

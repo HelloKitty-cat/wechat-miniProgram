@@ -1,0 +1,18 @@
+<!--pages/tmpList/tmpList.wxml-->
+<template name='tmpList'>
+  <view class='tmpContainer'>
+    <view class='tmpHeader'>
+      <image src='{{avatar}}' class='tmpImage'></image>
+      <text class='tmpText'>{{date}}</text>
+    </view>
+    <text class='tmpTitle'>{{title}}</text>
+    <image src='{{detail_img}}' class='tmpBigImage'></image>
+    <text class='tmpContent'>{{detail_content}}</text>
+    <view class='collection_share'>
+      <image src='{{detail_love_image1}}'></image>
+      <text>{{love_count}}</text>
+      <image src='{{detail_love_image2}}'></image>
+      <text>{{love_count}}</text>
+    </view>
+  </view>
+</template>

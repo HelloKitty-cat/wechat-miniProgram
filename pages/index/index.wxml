@@ -1,0 +1,10 @@
+<!--pages/index/index.wxml-->
+<view class='indexContainer'>
+  <image wx:if='{{userInfo.avatarUrl}}' class='indexImage' src='{{userInfo.avatarUrl}}'></image>
+  <button class='indexBtn' wx:else open-type='getUserInfo' bindgetuserinfo='getUserInfo'>点击获取用户信息</button>
+  <text wx:if='{{userInfo.nickName}}' class='indexText'>Hello {{userInfo.nickName}}</text>
+  <text wx:else class='indexText'>Hello {{msg}}</text>
+  <view class='indexGo' catchtap='handleGo'>
+    <text>点击开启小程序之旅</text>
+  </view>
+</view>
