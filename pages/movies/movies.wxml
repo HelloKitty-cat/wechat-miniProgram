@@ -1,0 +1,10 @@
+<!--pages/movies/movies.wxml-->
+<view catchtap='moviesdDetails' class='moviesContainer' wx:for='{{moviesArr}}' wx:key='{{index}}' data-index='{{index}}'>
+  <image class='movieHeader' src='{{item.images.large}}'></image>
+  <view class='moviewsInfo'>
+    <text class='movie_name'>{{item.original_title}}</text>
+    <text class='movie_year'>{{item.year}}</text>
+    <text class='movie_dir'>{{item.directors[0].name}}</text>
+  </view>
+  <text class='moviewsRating'>{{item.rating.average}}</text>
+</view>

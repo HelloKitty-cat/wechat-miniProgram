@@ -1,6 +1,7 @@
 <!--pages/detail/detail.wxml-->
 <view class='detailContent'>
-  <image class='detailImage' src='{{listArr.detail_img}}'></image>
+  <image class='detailImage' src='{{isMusicPlay?listArr.music.coverImgUrl:listArr.detail_img}}'></image>
+  <image class='musicImage' catchtap='handleMusicPlay' src='{{isMusicPlay?"/images/music/music-start.png":"/images/music/music-stop.png"}}'></image>
   <view class='tmpHeader'>
     <image src='{{listArr.avatar}}'></image>
     <text>{{listArr.author}}</text>
@@ -10,8 +11,8 @@
   <text class='tmpTitle'>{{listArr.title}}</text>
   <view class='shareContainer'>
     <view class='shareIcon'> 
-      <image src='/images/icon/collection-anti.png'></image>
-      <image src='/images/icon/share-anti.png'></image>
+      <image bindtap='handleClloection' src='{{ iscllocted?"/images/icon/collection.png":"/images/icon/collection-anti.png"}}'></image>
+      <image src='/images/icon/share.png'></image>
     </view>
     <view class='line'></view>
   </view>
